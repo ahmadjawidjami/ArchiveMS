@@ -7,9 +7,9 @@ The Alpha Team
 -------------------------
 SOW for Agreement to Perform Consulting Services to Islaah TV
 -------------------------
-Date: March 30, 2013
-Services Performed By: The Alpha Team
-Services Performed To: Islaah TV
+Date: March 30, 2013</br>
+Services Performed By: The Alpha Team</br>
+Services Performed To: Islaah TV</br>
 
 -------------------------
 
