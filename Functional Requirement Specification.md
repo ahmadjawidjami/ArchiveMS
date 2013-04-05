@@ -2,6 +2,7 @@ Functional Requirement Specification
 =====================================
 
 1_ As an administrator or user I can access the database from a local/remote system
+
 2_ As a user or administrator I can archive data based on
 
 * Name
