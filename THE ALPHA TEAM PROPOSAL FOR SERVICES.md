@@ -13,11 +13,11 @@ for improving their data management, Archiving and retrieving Data.
 The customer’s objectives are as following:
 
 
-* <Need #1: managing data in an efficient  manner>
-* <Need #2: Archiving data in an efficient manner >
-* <Need #3: Retrieving Data in an easy way>
-* <Need #4 :having a report of  data>
-* <Need #5:  avoiding Redundancy and duplication in data.>
+* < Need #1: managing data in an efficient  manner>
+* < Need #2: Archiving data in an efficient manner >
+* < Need #3: Retrieving Data in an easy way>
+* < Need #4 :having a report of  data>
+* < Need #5:  avoiding Redundancy and duplication in data.>
 * < Need #6:Prevention of data-loss (Data Backup)>
 
 ### The Opportunity ###
@@ -28,9 +28,9 @@ management in their archive. So we would like to grab this opportunity and offer
 
 to summarize the client’s goal based on their request for proposal.
  
-* <Goal #1: to have a system that  manages their data better>
-* <Goal #2: assure quick access to their data>
-* <Goal #3: assure data loss prevention>
+* < Goal #1: to have a system that  manages their data better>
+* < Goal #2: assure quick access to their data>
+* < Goal #3: assure data loss prevention>
 
 ### The Solution ###
 
@@ -43,14 +43,13 @@ your archive better.
 We offer these recommendations:
 
 
-* <Recommendation #1: desktop based TV Archive Manager System>
-* <Recommendation #2: web based TV Archive manger System(TAM)>
+* < Recommendation #1: desktop based TV Archive Manager System>
+* < Recommendation #2: web based TV Archive manger System(TAM)>
 
 OUR PROPOSAL
 ------------------------
 
 We are a team consisting of six people which can help you solve your problems and achieve your goals. Our 
-
 team has the following members with their specific abilities.
 
 1. Ahmad Jawid (Programmer & Software Engineer)
@@ -191,16 +190,16 @@ We expect our proposed solution to Eslaah TV’s requirements to provide the fol
 
 ### Financial Benefits ###
 
-* <Result #1: Requires less resources
-* <Result #2: Efficient usage of resources
-* <Result #3: Increased productivity
+* < Result #1: Requires less resources
+* < Result #2: Efficient usage of resources
+* < Result #3: Increased productivity
 
 ### Technical Benefits ###
 
-* <Result #1: Increased work agility>
-* <Result #2: Easy data trouble shooting>
-* <Result #3: Easy data management>
-* <Result #4: increased work accuracy
+* < Result #1: Increased work agility>
+* < Result #2: Easy data trouble shooting>
+* < Result #3: Easy data management>
+* < Result #4: increased work accuracy
 
 CONCLUSION
 -------------------------
@@ -211,9 +210,9 @@ supporting the software. We are confident that we can meet the challenges ahead,
 
 with you in delivering an effective solution. 
 
-If you have questions on this proposal, feel free to contact <Ahmad Jawed Jami > at your convenience by email 
+If you have questions on this proposal, feel free to contact < Ahmad Jawed Jami > at your convenience by email 
 
-at <AlphaTeam@gmail.com > .We will be in touch with you next week to arrange a follow-up conversation on the 
+at < AlphaTeam@gmail.com > .We will be in touch with you next week to arrange a follow-up conversation on the 
 
 proposal.
 
