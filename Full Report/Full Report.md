@@ -22,7 +22,7 @@ The customer's objectives are as following:
 
 ### The Opportunity ###
 
-As we have read the clients request for proposal, we recognized that their major goal is to have better data management in their archive. So we would like to grab this opportunity and offer our solution. We would like to summarize the client�s goal based on their request for proposal.
+As we have read the clients request for proposal, we recognized that their major goal is to have better data management in their archive. So we would like to grab this opportunity and offer our solution. We would like to summarize the client's goal based on their request for proposal.
  
 * < Goal #1: to have a system that  manages their data better>
 * < Goal #2: assure quick access to their data>
