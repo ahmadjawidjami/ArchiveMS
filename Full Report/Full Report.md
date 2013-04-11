@@ -1,4 +1,4 @@
-																		786
+												786
 <img src="UI-Images/TVAM.jpg" height="630" width="800"> <br> <br> <br> 
 THE ALPHA TEAM PROPOSAL FOR SERVICES
 ============================================
