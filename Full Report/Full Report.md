@@ -167,16 +167,16 @@ We expect our proposed solution to Eslaah TV's requirements to provide the follo
 
 ### Financial Benefits ###
 
-* <Result #1: Requires less resources
-* <Result #2: Efficient usage of resources
-* <Result #3: Increased productivity
+* < Result #1: Requires less resources
+* < Result #2: Efficient usage of resources
+* < Result #3: Increased productivity
 
 ### Technical Benefits ###
 
-* <Result #1: Increased work agility>
-* <Result #2: Easy data trouble shooting>
-* <Result #3: Easy data management>
-* <Result #4: increased work accuracy
+* < Result #1: Increased work agility>
+* < Result #2: Easy data trouble shooting>
+* < Result #3: Easy data management>
+* < Result #4: increased work accuracy
 
 CONCLUSION
 -------------------------
@@ -416,7 +416,7 @@ Fig4: Edit-2
 Fig5: Report 
 <img src="UI-Images/5-Report.jpg" height="630" width="800"> <br> 
 Fig6: Backup 
-<img src="UI-Images/6-backup.jpg" height="630" width="800"> <br> 
+<img src="UI-Images/6-Backup.jpg" height="630" width="800"> <br> 
 Fig7: User management 
 <img src="UI-Images/7-user-management.jpg" height="630" width="800"> <br> 
 Fig8: User management-2 
