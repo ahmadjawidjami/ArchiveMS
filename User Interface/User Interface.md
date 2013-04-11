@@ -10,7 +10,7 @@ Fig4: Edit-2
 Fig5: Report
 <img src="UI-Images/5-Report.jpg" height="630" width="800"> <br>
 Fig6: Backup
-<img src="UI-Images/6-backup.jpg" height="630" width="800"> <br>
+<img src="UI-Images/6-Backup.jpg" height="630" width="800"> <br>
 Fig7: User management
 <img src="UI-Images/7-user-management.jpg" height="630" width="800"> <br>
 Fig8: User management-2
