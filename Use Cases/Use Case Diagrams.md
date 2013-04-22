@@ -1,4 +1,4 @@
-# Use Case Description
+# Use Case Diagrams
 
 UC-1: Backup
 <img src="UseCase Diagrams/images/backup.png"> <br>
