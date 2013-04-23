@@ -1,30 +1,30 @@
 # Detailed Use Cases
 
 
-<img src="images/UC1.png" > <br>
+<img src="Detailed Use Cases\imagesUC1.png" > <br>
 
-<img src="images/UC2.png" > <br>
+<img src="Detailed Use Cases\imagesUC2.png" > <br>
 
-<img src="images/UC3.png" > <br>
+<img src="Detailed Use Cases\imagesUC3.png" > <br>
 
-<img src="images/UC4.png" > <br>
+<img src="Detailed Use Cases\imagesUC4.png" > <br>
 
-<img src="images/UC5.png" > <br>
+<img src="Detailed Use Cases\imagesUC5.png" > <br>
 
-<img src="images/UC6.png" > <br>
+<img src="Detailed Use Cases\imagesUC6.png" > <br>
 
-<img src="images/UC7.png" > <br>
+<img src="Detailed Use Cases\imagesUC7.png" > <br>
 
-<img src="images/UC8.png" > <br>
+<img src="Detailed Use Cases\imagesUC8.png" > <br>
 
-<img src="images/UC9.png" > <br>
+<img src="Detailed Use Cases\imagesUC9.png" > <br>
 
-<img src="images/UC10.png" > <br>
+<img src="Detailed Use Cases\imagesUC10.png" > <br>
 
-<img src="images/UC11.png" > <br>
+<img src="Detailed Use Cases\imagesUC11.png" > <br>
 
-<img src="images/UC12.png" > <br>
+<img src="Detailed Use Cases\imagesUC12.png" > <br>
 
-<img src="images/UC13.png" > <br>
+<img src="Detailed Use Cases\imagesUC13.png" > <br>
 
-<img src="images/UC14.png" > <br>
+<img src="Detailed Use Cases\imagesUC14.png" > <br>
