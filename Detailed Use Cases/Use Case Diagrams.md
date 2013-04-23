@@ -1,11 +1,11 @@
 # Detailed Use Cases
 
 
-<img src="Detailed Use Cases\images\UC1.png" > <br>
+<img src="images/UC1.png" > <br>
 
-<img src="Detailed Use Cases\images\UC2.png" > <br>
+<img src="Detailed Use Cases/images/UC2.png" > <br>
 
-<img src="Detailed Use Cases\images\UC3.png" > <br>
+<img src="Detailed Use Cases\images/UC3.png" > <br>
 
 <img src="Detailed Use Cases\images\UC4.png" > <br>
 
