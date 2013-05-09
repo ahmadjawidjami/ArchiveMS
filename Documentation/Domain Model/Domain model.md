@@ -46,7 +46,7 @@
   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left">
       <tr>
-        <td width="623" colspan="3" valign="top"><p align="center">UC-2 Association</p></td>
+        <td width="623" colspan="3" valign="top"><p align="center">UC-2 Association - Archiving</p></td>
       </tr>
       <tr>
         <td width="216" valign="top"><p>Concept pair</p></td>
@@ -83,7 +83,7 @@
   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left">
       <tr>
-        <td width="623" colspan="3" valign="top"><p align="center">UC-2 Attributes</p></td>
+        <td width="623" colspan="3" valign="top"><p align="center">UC-2 Attributes - Archiving</p></td>
       </tr>
       <tr>
         <td width="134" valign="top"><p>Concept</p></td>
@@ -155,9 +155,6 @@
         <td width="144" valign="top"><p>Media    Downloader</p></td>
       </tr>
     </table></td>
-  </tr>
-  <tr>
-    <td> </td>
   </tr>
   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left" width="630">
@@ -1438,9 +1435,6 @@
     </table></td>
   </tr>
    <tr>
-    <td> </td>
-  </tr>
-   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left">
       <tr>
         <td width="623" colspan="3" valign="top"><p align="center">UC-13 Association</p></td>
@@ -1478,9 +1472,6 @@
     </table></td>
   </tr>
   
-  </tr>
-  <tr>
-    <td> </td>
   </tr>
   <tr>
     <td><table border="1" cellspacing="0" cellpadding="0" align="left">
@@ -1612,9 +1603,7 @@
       </tr>
     </table></td>
   </tr>
-  <tr>
-    <td> </td>
-  </tr>
+  
   <tr>
     <td><img src="img/UC-14 backup properties.bmp" width="684" height="473"></td>
   </tr>
