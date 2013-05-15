@@ -1,4 +1,4 @@
-												786
+																786
 <img src="UI-Images/TVAM.jpg" height="630" width="800"> <br> <br> <br> 
 THE ALPHA TEAM PROPOSAL FOR SERVICES
 ============================================
@@ -167,16 +167,16 @@ We expect our proposed solution to Eslaah TV's requirements to provide the follo
 
 ### Financial Benefits ###
 
-* < Result #1: Requires less resources
-* < Result #2: Efficient usage of resources
-* < Result #3: Increased productivity
+* <Result #1: Requires less resources
+* <Result #2: Efficient usage of resources
+* <Result #3: Increased productivity
 
 ### Technical Benefits ###
 
-* < Result #1: Increased work agility>
-* < Result #2: Easy data trouble shooting>
-* < Result #3: Easy data management>
-* < Result #4: increased work accuracy
+* <Result #1: Increased work agility>
+* <Result #2: Easy data trouble shooting>
+* <Result #3: Easy data management>
+* <Result #4: increased work accuracy
 
 CONCLUSION
 -------------------------
@@ -413,13 +413,15 @@ Fig3: Edit
 <img src="UI-Images/3-Edit.jpg" height="630" width="800"> <br> 
 Fig4: Edit-2 
 <img src="UI-Images/4-Editt.jpg" height="630" width="800"> <br> 
-Fig5: Report 
-<img src="UI-Images/5-Report.jpg" height="630" width="800"> <br> 
-Fig6: Backup 
+Fig5: Report-1 
+<img src="UI-Images/5-Report-1.jpg" height="630" width="800"> <br> 
+Fig6: Report-2 
+<img src="UI-Images/5-Report-2.jpg" height="630" width="800"> <br> 
+Fig7: Backup 
 <img src="UI-Images/6-Backup.jpg" height="630" width="800"> <br> 
-Fig7: User management 
+Fig8: User management 
 <img src="UI-Images/7-user-management.jpg" height="630" width="800"> <br> 
-Fig8: User management-2 
+Fig9: User management-2 
 <img src="UI-Images/8-user-management.jpg" height="630" width="800"> <br> 
 
 
@@ -430,4 +432,3 @@ done individually.
 Thanks  
 
 The Alpha Team 
-
