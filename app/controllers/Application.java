@@ -16,5 +16,14 @@ public class Application extends Controller {
     public static Result renderArchivePage(){
     	return ok (archive.render("this is archive page"));
     }
+    
+    
+    
+    
+    public static Result renderRecordPage(){
+    	
+    	return ok(record.render());
+    	
+    }
   
 }

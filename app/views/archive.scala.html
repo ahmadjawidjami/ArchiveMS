@@ -1,2 +1,65 @@
 @(message: String)
 @message
+
+<html>
+
+
+<head>
+
+       <link rel="stylesheet" type="text/css" media="screen"
+         href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+        
+
+</head>
+
+<body>
+
+
+
+@helper.form(action = routes.Archiver.archive(), 'enctype -> "multipart/form-data") {
+
+
+<div class = "container">
+
+<input type="file" name="record">
+
+
+
+<p>
+<label>category</label>
+<input type="text" name="category"> <br>
+<label>Name</label><input type="text" name="name">
+<label>Content</label><input type="text" name="content">
+	<input type="submit" class = "btn-primary">
+</p>
+</div>
+}
+
+
+
+<h2 align="center"> Archive</h2>
+Category: 
+<select>
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+<option></option>
+</select><br><br>
+
+<span class="help-inline">Name</span><input type="text">
+<span class="help-inline">Content</span><input type="text">
+<span class="help-inline">Date</span><input type="text">
+<span class="help-inline">Record</span><input type="text">
+<span class="help-inline">Publish</span><input type="text"><br><br>
+
+<span class="help-inline">Select File:</span><input type="text">
+<button class="btn btn-warning">Browse</button><br><br>
+<span class="help-inline">Select File:</span><input type="text">
+
+</p>
+
+</body>
+
+
+</html>
