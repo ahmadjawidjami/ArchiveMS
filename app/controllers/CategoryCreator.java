@@ -10,7 +10,7 @@ public class CategoryCreator extends Controller {
 	static String categoryName;
 	static CategoryStorage object;
 
-	public static Result createCategory() {
+	public static Result addCategory() {
 		Form<CategoryStorage> getForm = Form.form(CategoryStorage.class).bindFromRequest();
 		object = getForm.get();
 		
@@ -26,7 +26,6 @@ public class CategoryCreator extends Controller {
 	}
 	
 	
-	
 	private static void addCategoryIntoDisk() {
 		// TODO Auto-generated method stub
 
@@ -36,7 +35,4 @@ public class CategoryCreator extends Controller {
 		object.save();
 
 	}
-	
-	
-
-}
+	}
