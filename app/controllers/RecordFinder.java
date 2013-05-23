@@ -10,7 +10,7 @@ public class RecordFinder extends Controller {
 		
 		
 		
-		return ok("record found");
+		return ok(searched_record.render("fd"));
 	}
 	
 	
