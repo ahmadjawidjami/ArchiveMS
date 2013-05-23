@@ -1,2 +1,34 @@
-@(message: String)
-@message
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+</head>
+
+<body>
+<h3 align="center">Archive</h3>
+
+<div class="container">
+Category: <select style="margin:0 0 0 10px;">
+			<option type="text" name="name">Name</option>
+			<option type="text" name="category">Category</option>
+			<option type="date" name="publish">Publish</option>
+			<option type="date" name="record">Record</option>
+			<option type="date" name="archive">Archive</option>
+		</select><br><br>
+Name: <input class="input-medium" type="text" name="name" style="margin:0 0 0 33px;"><br><br>
+Content: <input class="input-medium" type="text" name="content" style="margin:0 0 0 20px;"><br><br>
+Date: <input class="input-medium" type="date" name="recordDate" style="margin:0 0 0 40px;"><br><br>
+Record: <input class="input-medium" type="date" name="publishDate" style="margin:0 0 0 25px;"><br><br>
+Publish: <input class="input-medium" type="date" name="archiveDate" style="margin:0 0 0 26px;"><br><br>
+
+<span style="margin:0 0 0 78px;">Select File: </span><input class="input-medium" type="text" name="SelectFile" style="margin:0 0 0 50px;">
+  <button class=" btn btn-warning" type="button" style="margin:0 0 0 15px;">Browse</button><br><br><br>
+  <button class=" btn btn-warning" type="button" style="margin:0 0 0 220px;">Submit</button><br><br>
+		
+		</div>
+</body>
+
+
+
+</html>
