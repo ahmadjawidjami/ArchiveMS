@@ -1,1 +1,25 @@
-this category page
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+</head>
+
+<body>
+	<h3 align="center">Category</h3>
+	<div class="container">
+		Add Category: <br> <br>
+		<form action="@routes.CategoryCreator.createCategory()" method="post">
+			<input class="input-medium" type="text" name="categoryName"
+				required="required"><br> <input
+				class=" btn btn-warning" type="submit" value="Add"> <br>
+		</form>
+		
+		<br> Delete Category: <br> <br>
+		<form action="@routes.CategoryRemover.removeCategory()" method="post">
+			<input name="categoryName" type="text" required="required"><br>
+			<input class=" btn btn-warning" type="submit" value="Delete">
+		</form>
+	</div>
+</body>
+</html>
