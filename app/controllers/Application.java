@@ -25,4 +25,6 @@ public class Application extends Controller {
     public static Result renderCategoryPage(){
     	return ok (category.render());
     }
+
+  
 }
