@@ -1,5 +1,29 @@
 package controllers;
 
-public class RecordFinder {
+import play.mvc.Controller;
+import play.mvc.Result;
+
+public class RecordFinder extends Controller {
+	
+	
+	public static Result findRecord(){
+		
+		
+		
+		return ok("record found");
+	}
+	
+	
+	public static void findRecordFromDisk(){
+		
+	}
+	
+	
+	
+	public static void findRecordFromDatabase(){
+		
+		
+		
+	}
 
 }
