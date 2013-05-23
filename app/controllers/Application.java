@@ -19,4 +19,7 @@ public class Application extends Controller {
     public static Result renderRecordPage(){
     	return ok (record.render());
     }
+    public static Result renderSerachedRecordPage(){
+    	return ok (serached_record.render());
+    }
 }
