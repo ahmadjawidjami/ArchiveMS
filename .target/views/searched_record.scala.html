@@ -1,0 +1,22 @@
+@(records: List[DetailsStorage])
+<html>
+<body>
+
+<p>   name  tag  category</p>
+<select name = "id">
+
+@for(p <- records){
+
+<option value="@p.id">@p.name @p.tag @p.category
+</option>
+
+
+
+
+}
+</select>
+
+<input type = "submit" value = "edit">
+
+</body>
+</html>
