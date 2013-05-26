@@ -5,19 +5,25 @@ import models.UniqueRecord;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.archive;
 import views.html.update;
 
 public class RecordSelector extends Controller {
 
 	public static Result selectRecord() {
 
-		Form<DetailsStorage> uniqueRecordForm = Form.form(DetailsStorage.class)
+		Form<UniqueRecord> uniqueRecordForm = Form.form(UniqueRecord.class)
 				.bindFromRequest();
-		DetailsStorage getUniqueRecord = uniqueRecordForm.get();
-		DetailsStorage uniqueRecord = DetailsStorage.find.byId(""+getUniqueRecord.id);
-		new RecordUpdater(uniqueRecord);
+		UniqueRecord UniqueRecord = uniqueRecordForm.get();
+		DetailsStorage uniqueRecord = DetailsStorage.find.byId(UniqueRecord.id);
+		if(UniqueRecord.submitType.equals("edit")){
+			new RecordUpdater(uniqueRecord);
 
-		return ok(update.render(uniqueRecord));
+			return ok(update.render(uniqueRecord));
+		}else{
+			return ok("record deleted");
+		}
+		
 	}
 
 }
