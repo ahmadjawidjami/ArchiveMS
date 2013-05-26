@@ -7,6 +7,7 @@ GET     /                           controllers.Application.index()
 GET		/archive					controllers.Application.renderArchivePage()
 POST	/archive/uploaded			controllers.Archiver.archive()
 GET		/category					controllers.Application.renderCategoryPage()
+POST	/category/add				controllers.CategoryCreator.addCategory()
 POST	/category/remove			controllers.CategoryRemover.removeCategory()
 
 
