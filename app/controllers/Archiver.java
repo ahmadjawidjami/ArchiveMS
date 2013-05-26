@@ -22,32 +22,31 @@ public class Archiver extends Controller {
 		Form<DetailsStorage> detailsForm = Form.form(DetailsStorage.class)
 				.bindFromRequest();
 		DetailsStorage recordDetails = detailsForm.get();
-		
-		
 
 		// file form
 		MultipartFormData recordForm = request().body().asMultipartFormData();
 
 		FilePart record = recordForm.getFile("record");
-		
-		
 
 		if (record != null) {
 			String fileName = record.getFilename();
-			// String contentType = record.getContentType();
 			File file = record.getFile();
-			
+
 			try {
-				if(recordDetails.category.equals("lessons")){
+				if (recordDetails.category.equals("lessons")) {
 					recordDetails.path = "uploads/lessons/";
-					archiveToDisk(file, new File(recordDetails.path + fileName));
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
 					archiveToDatabase(recordDetails);
 				}
-				
+
 			} catch (Exception ex) {
 				return ok(ex.getMessage());
 			}
-			
+
 			return ok("file uploaded");
 		} else {
 			flash("error", "Missing file");
