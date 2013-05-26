@@ -7,7 +7,12 @@ GET     /                           controllers.Application.index()
 GET		/archive					controllers.Application.renderArchivePage()
 GET		/category					controllers.Application.renderCategoryPage()
 POST	/category/remove			controllers.CategoryRemover.removeCategory()
-
-
+GET		/record						controllers.Application.renderRecordPage()
+POST	/search_record				controllers.RecordFinder.findRecord()
+GET		/search_result				controllers.PageMaker.makePage()
+POST	/update						controllers.RecordSelector.selectRecord()
+POST	/recordUpdated						controllers.RecordUpdater.updateRecord()
+POST	/upload/done				controllers.Archiver.archive()
+GET		/record						controllers.Application.renderRecordPage()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
