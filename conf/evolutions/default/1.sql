@@ -3,6 +3,11 @@
 
 # --- !Ups
 
+create table category_storage (
+  category_name             varchar(255) not null,
+  constraint pk_category_storage primary key (category_name))
+;
+
 create table details_storage (
   id                        integer auto_increment not null,
   category                  varchar(255),
@@ -21,6 +26,8 @@ create table details_storage (
 # --- !Downs
 
 SET FOREIGN_KEY_CHECKS=0;
+
+drop table category_storage;
 
 drop table details_storage;
 
