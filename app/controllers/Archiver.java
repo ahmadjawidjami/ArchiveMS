@@ -30,13 +30,16 @@ public class Archiver extends Controller {
 
 		if (record != null) {
 			String fileName = record.getFilename();
-			// String contentType = record.getContentType();
 			File file = record.getFile();
 
 			try {
 				if (recordDetails.category.equals("lessons")) {
 					recordDetails.path = "uploads/lessons/";
-					archiveToDisk(file, new File(recordDetails.path + fileName));
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
 					archiveToDatabase(recordDetails);
 				}
 

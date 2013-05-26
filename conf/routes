@@ -5,6 +5,7 @@
 # Home page
 GET     /                           controllers.Application.index()
 GET		/archive					controllers.Application.renderArchivePage()
+POST	/archive/uploaded			controllers.Archiver.archive()
 GET		/category					controllers.Application.renderCategoryPage()
 POST	/category/remove			controllers.CategoryRemover.removeCategory()
 

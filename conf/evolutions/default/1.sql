@@ -8,6 +8,18 @@ create table category_storage (
   constraint pk_category_storage primary key (category_name))
 ;
 
+create table details_storage (
+  id                        integer auto_increment not null,
+  category                  varchar(255),
+  name                      varchar(255),
+  tag                       varchar(255),
+  publish_date              varchar(255),
+  record_date               varchar(255),
+  archive_date              varchar(255),
+  path                      varchar(255),
+  constraint pk_details_storage primary key (id))
+;
+
 
 
 
@@ -16,6 +28,8 @@ create table category_storage (
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table category_storage;
+
+drop table details_storage;
 
 SET FOREIGN_KEY_CHECKS=1;
 
