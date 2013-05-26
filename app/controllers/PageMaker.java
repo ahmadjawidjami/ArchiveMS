@@ -22,5 +22,4 @@ public class PageMaker extends Controller {
 
 		return ok(searched_record.render(records));
 	}
-
 }

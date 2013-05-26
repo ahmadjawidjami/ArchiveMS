@@ -11,13 +11,19 @@ public class RecordSelector extends Controller {
 
 	public static Result selectRecord() {
 
-		Form<DetailsStorage> uniqueRecordForm = Form.form(DetailsStorage.class)
+		Form<UniqueRecord> uniqueRecordForm = Form.form(UniqueRecord.class)
 				.bindFromRequest();
-		DetailsStorage getUniqueRecord = uniqueRecordForm.get();
-		DetailsStorage uniqueRecord = DetailsStorage.find.byId(""+getUniqueRecord.id);
+		UniqueRecord UniqueRecord = uniqueRecordForm.get();
+		
+		DetailsStorage uniqueRecord = DetailsStorage.find.byId(""+UniqueRecord.id);
+		if(UniqueRecord.submitType.equals("edit")){
 		new RecordUpdater(uniqueRecord);
 
 		return ok(update.render(uniqueRecord));
+		}else{
+			 new RecordRemover().removeRecord(UniqueRecord);
+			return ok("Record is deleted");
+		}
 	}
 
 }
