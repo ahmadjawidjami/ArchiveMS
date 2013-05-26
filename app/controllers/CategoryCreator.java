@@ -1,5 +1,5 @@
 package controllers;
 
-public class CategoryCreator {
+public class CategoryCreator{
 
 }

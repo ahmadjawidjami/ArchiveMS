@@ -2,7 +2,6 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-
 import views.html.*;
 
 public class Application extends Controller {
@@ -15,6 +14,11 @@ public class Application extends Controller {
     
     public static Result renderArchivePage(){
     	return ok (archive.render("this is archive page"));
+    }
+    
+    
+    public static Result renderCategoryPage(){
+    	return ok (category.render());
     }
   
 }
