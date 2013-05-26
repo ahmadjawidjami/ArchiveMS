@@ -3,11 +3,12 @@
 <body>
 
 <p>   name  tag  category</p>
+<form action="@routes.RecordSelector.selectRecord()" method="post">
 <select name = "id">
 
 @for(p <- records){
 
-<option value="@p.id">@p.name @p.tag @p.category
+<option value="@p.id">@p.name @p.tag @p.category @p.recordDate
 </option>
 
 
@@ -17,6 +18,7 @@
 </select>
 
 <input type = "submit" value = "edit">
+</form>
 
 </body>
 </html>
