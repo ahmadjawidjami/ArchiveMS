@@ -1,13 +1,23 @@
 package models;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-public class DetailsStorage {
+import play.db.ebean.Model;
+
+@Entity
+public class DetailsStorage extends Model {
+	@Id
 	public int id;
-	public String name;
 	public String category;
-	public Date publish;
-	public Date record;
-	public Date archive;
+	public String name;
+	public String tag;
+	public String publishDate;
+	public String recordDate;
+	public String archiveDate;
+	public String path;
+
+	public static Finder<String, DetailsStorage> find = new Finder<String, DetailsStorage>(
+			String.class, DetailsStorage.class);
 
 }

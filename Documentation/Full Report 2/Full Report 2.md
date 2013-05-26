@@ -4,6 +4,7 @@
     <td><div align="center"><strong>Usecase Diagrams</strong></div></td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/usecase diagrams/backup.jpg" width="930" height="410"><</td>
   </tr>
   <tr>
@@ -17,6 +18,21 @@
   </tr>
   <tr>
     <td><img src="Images/usecase diagrams/user management.jpg" width="910" height="310"></td>
+=======
+    <td><img src="Img/usecase diagrams/backup.jpg" width="930" height="410"><</td>
+  </tr>
+  <tr>
+    <td><img src="Img/usecase diagrams/Data entry.jpg" width="780" height="340"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/usecase diagrams/data retrieval.jpg" width="820" height="360"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/usecase diagrams/manipulation.jpg" width="920" height="390"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/usecase diagrams/user management.jpg" width="910" height="310"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td>Detailed Use Cases (update) </td>
@@ -1033,19 +1049,31 @@
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/1- Authenticate.jpg" width="730" height="540"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/1- Authenticate.jpg" width="730" height="540"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/2- archive.jpg" width="700" height="570"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/2- archive.jpg" width="700" height="570"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/3- search.jpg" width="670" height="740"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/3- search.jpg" width="670" height="740"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -1056,7 +1084,11 @@
   </tr>
   
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/4-report.jpg" alt="" width="910" height="610"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/4-report.jpg" alt="" width="910" height="610"></td>
+>>>>>>> master
   </tr>
   
   <tr>
@@ -1066,53 +1098,88 @@
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/5- auto backup.jpg" width="554" height="630" alt=" "></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/5- auto backup.jpg" width="554" height="630" alt=" "></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/6-manual backup.jpg" width="654" height="660"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/6-manual backup.jpg" width="654" height="660"></td>
+>>>>>>> master
   </tr>
   <tr>
     <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/7- Add category SQ diagram.jpg" width="660" height="580"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/7- Add category SQ diagram.jpg" width="660" height="580"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/8- delete category SQ diagram.jpg" width="620" height="590"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/8- delete category SQ diagram.jpg" width="620" height="590"></td>
+>>>>>>> master
   </tr>
     <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/9- Edit Record.jpg" width="880" height="650"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/9- Edit Record.jpg" width="880" height="650"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/10- Delete Record.jpg" width="850" height="650"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/10- Delete Record.jpg" width="850" height="650"></td>
+>>>>>>> master
   </tr>
     <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/11- Add user.jpg" width="650" height="620"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/11- Add user.jpg" width="650" height="620"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/12- Remove user.jpg" width="630" height="620"></td>
   </tr>
     <tr>
     <td><img src="Images/0 3- Sequence Diagram (Update)-f j/13- set backup properties.jpg" width="514" height="530"></td>
+=======
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/12- Remove user.jpg" width="630" height="620"></td>
+  </tr>
+    <tr>
+    <td><img src="Img/0 3- Sequence Diagram (Update)-f j/13- set backup properties.jpg" width="514" height="530"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
@@ -1121,7 +1188,11 @@
     <td><div align="center"><strong>Activity Diagram</strong></div></td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC1 - Authenticate user.jpg" width="470" height="670"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC1 - Authenticate user.jpg" width="470" height="670"></td>
+>>>>>>> master
   </tr>
     <td></td>
   </tr>
@@ -1133,7 +1204,11 @@
   </tr>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC2- Archive.jpg" width="586" height="670"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC2- Archive.jpg" width="586" height="670"></td>
+>>>>>>> master
   </tr>
     <td></td>
   </tr>
@@ -1141,59 +1216,99 @@
   <tr>
     <td> </td>
   </tr>
+<<<<<<< HEAD
       <td><img src="Images/0 4 - activity diagram-f/UC-3 Search.jpg" width="630" height="810"></td>
+=======
+      <td><img src="Img/0 4 - activity diagram-f/UC-3 Search.jpg" width="630" height="810"></td>
+>>>>>>> master
   </tr>
   </tr>
   <tr>
     <td>&nbsp;</td>
   </tr>
     <td>
+<<<<<<< HEAD
     <img src="Images/0 4 - activity diagram-f/UC4 - Activity Diagram.jpg" width="580" height="680">
+=======
+    <img src="Img/0 4 - activity diagram-f/UC4 - Activity Diagram.jpg" width="580" height="680">
+>>>>>>> master
 </td>
   </tr>
   
     <tr>
     <td> </td>
   </tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC6 - Activity Diagram.jpg" width="354" height="460"></td>
   </tr>
   </tr>
   <tr>
     <td><img src="Images/0 4 - activity diagram-f/UC7 - Add Category.jpg" width="820" height="870"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC6 - Activity Diagram.jpg" width="354" height="460"></td>
+  </tr>
+  </tr>
+  <tr>
+    <td><img src="Img/0 4 - activity diagram-f/UC7 - Add Category.jpg" width="820" height="870"></td>
+>>>>>>> master
   </tr>
     <td></td>
   </tr>
   </tr>
   <tr>
     <td>
+<<<<<<< HEAD
     <img src="Images/0 4 - activity diagram-f/UC8 - delete Category.jpg" width="710" height="740">
+=======
+    <img src="Img/0 4 - activity diagram-f/UC8 - delete Category.jpg" width="710" height="740">
+>>>>>>> master
   
    </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC9 - Edit Record.jpg" width="630" height="1160"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC9 - Edit Record.jpg" width="630" height="1160"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC10 - Delete Record.jpg" width="630" height="970"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC10 - Delete Record.jpg" width="630" height="970"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
+<<<<<<< HEAD
       <td><img src="Images/0 4 - activity diagram-f/UC11- Add user.jpg" width="670" height="790"></td>
+=======
+      <td><img src="Img/0 4 - activity diagram-f/UC11- Add user.jpg" width="670" height="790"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC12- remove user.jpg" width="386" height="770"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC12- remove user.jpg" width="386" height="770"></td>
+>>>>>>> master
   </tr>
     <td></td>
   </tr>
   <tr>
+<<<<<<< HEAD
     <td><img src="Images/0 4 - activity diagram-f/UC13- set backup properties.jpg" width="446" height="580"></td>
+=======
+    <td><img src="Img/0 4 - activity diagram-f/UC13- set backup properties.jpg" width="446" height="580"></td>
+>>>>>>> master
   </tr>
   <tr>
     <td> </td>
@@ -2604,6 +2719,7 @@
   <tr>
     <td> <div align="center">domain model diagram </div></td>
   </tr>
+<<<<<<< HEAD
     <td><img src="Images/0 6- domain model diagram - f/UC-1 Authentication.jpg" width="830" height="510"></td>
   </tr>
   <tr>
@@ -2640,3 +2756,43 @@
   </tr>
 </table>
 
+=======
+    <td><img src="Img/0 6- domain model diagram - f/UC-1 Authentication.jpg" width="830" height="510"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC-2 archiving.jpg" width="840" height="560"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC- 3 search.jpg" width="994" height="650"></td>
+  </tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC -4 Report.jpg" width="1020" height="650"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC- 5 auto backup.jpg" width="890" height="480"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC- 6 manual backup.jpg" width="830" height="540"></td>
+  </tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC- 7 Add category.jpg" width="870" height="600"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC - 8 remove category.jpg" width="870" height="600"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC - 9 record edition.jpg" width="1060" height="720"></td>
+  </tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC-10 record deletion.jpg" width="994" height="650"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC -11 Add user.jpg" width="870" height="600"></td>
+  </tr>
+  <tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC-12 remove user.jpg" width="860" height="510"></td>
+  </tr>
+    <td><img src="Img/0 6- domain model diagram - f/UC-13 backup properties.jpg" width="630" height="490"></td>
+  </tr>
+</table>
+
+
+
+>>>>>>> master

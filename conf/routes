@@ -5,8 +5,10 @@
 # Home page
 GET     /                           controllers.Application.index()
 GET		/archive					controllers.Application.renderArchivePage()
-GET		/category					controllers.Application.renderCategory()
+POST	/archive/uploaded			controllers.Archiver.archive()
+GET		/category					controllers.Application.renderCategoryPage()
 POST	/category/add				controllers.CategoryCreator.addCategory()
+POST	/category/remove			controllers.CategoryRemover.removeCategory()
 
 
 # Map static resources from the /public folder to the /assets URL path
