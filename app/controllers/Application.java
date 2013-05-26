@@ -10,16 +10,16 @@ public class Application extends Controller {
 		return ok(index.render("Your new application is ready."));
 	}
 
-//	public static Result renderArchivePage() {
-//		return ok(archive.render());
-//	}
+	public static Result renderArchivePage() {
+		return ok(archive.render());
+	}
 
 	public static Result renderRecordPage() {
 		return ok(record.render());
 	}
 
-//	public static Result renderCategoryPage() {
-//		return ok(category.render());
-//	}
+	public static Result renderCategoryPage() {
+		return ok(category.render());
+	}
 
 }
