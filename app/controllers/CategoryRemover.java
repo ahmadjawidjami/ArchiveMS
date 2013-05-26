@@ -6,30 +6,28 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 public class CategoryRemover extends Controller {
-	static String categoryName;
-	static CategoryStorage categoryRem;
-	static Form<CategoryStorage> categoryRemove;
 
 	public static Result removeCategory() {
-		categoryRemove = Form.form(CategoryStorage.class).bindFromRequest();
-		categoryRem = categoryRemove.get();
-		if (categoryRem.categoryName != null) {
-			removeCategoryFromDB();
+		Form<CategoryStorage> categoryDetailsForm = Form.form(
+				CategoryStorage.class).bindFromRequest();
+		CategoryStorage categoryToDelete = categoryDetailsForm.get();
+		if (categoryToDelete.toString() != null) {
+			removeCategoryFromDatabase(categoryToDelete);
 			removeCategoryFromDisk();
-			categoryName = categoryRem.categoryName;
-			return ok("Category '" + categoryName + "' is now Deleted");
+			return ok("Category '" + categoryToDelete.toString()
+					+ "' is now Deleted");
 		} else
 			return notFound("No category was selected");
 	}
 
-	public static void removeCategoryFromDB() {
-		categoryRem.delete();
+	public static void removeCategoryFromDatabase(
+			CategoryStorage categoryToDelete) {
+		categoryToDelete.delete();
 
 	}
 
 	public static void removeCategoryFromDisk() {
-		
-		
+
 	}
 
 }
