@@ -8,7 +8,7 @@ import play.mvc.Result;
 public class CategoryRemover extends Controller {
 
 	public static Result removeCategory() {
-		Form<CategoryStorage> categoryDetailsForm = Form.form(
+		Form <CategoryStorage> categoryDetailsForm = Form.form(
 				CategoryStorage.class).bindFromRequest();
 		CategoryStorage categoryToDelete = categoryDetailsForm.get();
 		if (categoryToDelete.toString() != null) {
