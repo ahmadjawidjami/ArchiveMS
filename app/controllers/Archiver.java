@@ -35,6 +35,7 @@ public class Archiver extends Controller {
 			try {
 				if (recordDetails.category.equals("lessons")) {
 					recordDetails.path = "uploads/lessons/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
 					archiveToDisk(file,
 							new File(recordDetails.path + recordDetails.name+"."
 									+ fileName.charAt((int) fileName.length() - 3)
@@ -48,6 +49,7 @@ public class Archiver extends Controller {
 			}
 
 			return ok("file uploaded");
+			
 		} else {
 			flash("error", "Missing file");
 			return redirect(routes.Application.index());
