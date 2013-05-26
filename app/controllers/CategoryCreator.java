@@ -7,32 +7,29 @@ import play.mvc.Result;
 
 public class CategoryCreator extends Controller {
 
-	static String categoryName;
-	static CategoryStorage object;
-
 	public static Result addCategory() {
-		Form<CategoryStorage> getForm = Form.form(CategoryStorage.class).bindFromRequest();
-		object = getForm.get();
-		
-		if (object.categoryName.length()>= 4) {
-			addCategoryToDatabase();
-			addCategoryIntoDisk();
-			return ok("Category '" + object.categoryName + "' successfully added to the sysyem");
+		Form<CategoryStorage> categoryNameFromForm = Form.form(
+				CategoryStorage.class).bindFromRequest();
+		CategoryStorage newCategory = categoryNameFromForm.get();
+
+		if (newCategory.categoryName.length() >= 4) {
+			addCategoryToDatabase(newCategory);
+			addCategoryToDisk();
+			return ok("Category '" + newCategory.categoryName
+					+ "' successfully added to the sysyem");
 
 		} else {
 			return ok("Your category name is less than 4");
 		}
-		
-	}
-	
-	
-	private static void addCategoryIntoDisk() {
-		// TODO Auto-generated method stub
 
 	}
 
-	private static void addCategoryToDatabase() {
-		object.save();
+	private static void addCategoryToDisk() {
 
 	}
+
+	private static void addCategoryToDatabase(CategoryStorage newCategory) {
+		newCategory.save();
+
 	}
+}
