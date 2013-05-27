@@ -33,8 +33,85 @@ public class Archiver extends Controller {
 			File file = record.getFile();
 
 			try {
-				if (recordDetails.category.equals("lessons")) {
-					recordDetails.path = "uploads/lessons/";
+				if (recordDetails.category.equals("Cartoon and Children")) {
+					recordDetails.path = "uploads/cartoon_and_children/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Chants")) {
+					recordDetails.path = "uploads/chants/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Documentary")) {
+					recordDetails.path = "uploads/documentary/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Live Programs")) {
+					recordDetails.path = "uploads/live_programs/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Productional Programs")) {
+					recordDetails.path = "uploads/productional_programs/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Recitations")) {
+					recordDetails.path = "uploads/recitations/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Series")) {
+					recordDetails.path = "uploads/series/";
+					// in order to upload file the : uploads/lessons/ . folder should exist in the project
+					archiveToDisk(file,
+							new File(recordDetails.path + recordDetails.name+"."
+									+ fileName.charAt((int) fileName.length() - 3)
+									+ fileName.charAt((int) fileName.length() - 2)
+									+ fileName.charAt((int) fileName.length() - 1)));
+					archiveToDatabase(recordDetails);
+				}
+				
+				if (recordDetails.category.equals("Short Clips and Chants")) {
+					recordDetails.path = "uploads/short_clips_and_chants/";
 					// in order to upload file the : uploads/lessons/ . folder should exist in the project
 					archiveToDisk(file,
 							new File(recordDetails.path + recordDetails.name+"."

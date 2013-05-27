@@ -11,7 +11,7 @@ public class CategoryRemover extends Controller {
 		Form <CategoryStorage> categoryDetailsForm = Form.form(
 				CategoryStorage.class).bindFromRequest();
 		CategoryStorage categoryToDelete = categoryDetailsForm.get();
-		if (categoryToDelete.categoryName != null) {
+		if (!categoryToDelete.categoryName.equals("")) {
 			removeCategoryFromDatabase(categoryToDelete);
 			removeCategoryFromDisk();
 			return ok("Category '" + categoryToDelete.categoryName
