@@ -1,0 +1,21 @@
+@(records: List[DetailsStorage])
+<html>
+<body>
+
+<p>   name  tag  category</p>
+<form action="@routes.RecordSelector.selectRecord()" method="post">
+<select name = "id">
+
+@for(p <- records){
+
+<option value="@p.id">@p.name @p.tag @p.category @p.recordDate
+</option>
+}
+
+
+<input type = "submit" value = "edit" name = "submitType">
+<input type = "submit" value = "delete" name = "submitType">
+
+</form>
+</body>
+</html>
