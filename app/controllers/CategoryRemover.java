@@ -14,7 +14,7 @@ public class CategoryRemover extends Controller {
 		if (categoryToDelete.categoryName != null) {
 			removeCategoryFromDatabase(categoryToDelete);
 			removeCategoryFromDisk();
-			return ok("Category '" + categoryToDelete.toString()
+			return ok("Category '" + categoryToDelete.categoryName
 					+ "' is now Deleted");
 		} else
 			return notFound("No category was selected");

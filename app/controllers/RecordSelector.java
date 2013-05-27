@@ -15,18 +15,27 @@ public class RecordSelector extends Controller {
 		Form<UniqueRecord> uniqueRecordForm = Form.form(UniqueRecord.class)
 				.bindFromRequest();
 		UniqueRecord UniqueRecord = uniqueRecordForm.get();
-
-		DetailsStorage uniqueRecord = DetailsStorage.find.byId(""
-				+ UniqueRecord.id);
-		if (UniqueRecord.submitType.equals("edit")) {
-			new RecordUpdater(uniqueRecord);
-
-			return ok(update.render(uniqueRecord));
-		} else {
-			new RecordRemover().removeRecord(UniqueRecord);
-			return ok("Record is deleted");
-
+		
+		if(UniqueRecord.id.equals("")){
+			
+			return ok("nothing to select");
+			
 		}
+		else{
+			DetailsStorage uniqueRecord = DetailsStorage.find.byId(""
+					+ UniqueRecord.id);
+			if (UniqueRecord.submitType.equals("edit")) {
+				new RecordUpdater(uniqueRecord);
+
+				return ok(update.render(uniqueRecord));
+			} else {
+				new RecordRemover().removeRecord(UniqueRecord);
+				return ok("Record is deleted");
+
+			}
+		}
+
+		
 
 	}
 }

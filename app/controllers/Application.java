@@ -1,5 +1,9 @@
 package controllers;
 
+import java.util.List;
+
+import models.CategoryStorage;
+
 import play.*;
 import play.mvc.*;
 import views.html.*;
@@ -11,7 +15,8 @@ public class Application extends Controller {
 	}
 
 	public static Result renderArchivePage() {
-		return ok(archive.render());
+		List <CategoryStorage> categories = CategoryStorage.find.all();
+		return ok(archive.render(categories));
 	}
 
 	public static Result renderRecordPage() {
@@ -19,7 +24,9 @@ public class Application extends Controller {
 	}
 
 	public static Result renderCategoryPage() {
-		return ok(category.render());
+		
+		List <CategoryStorage> categories = CategoryStorage.find.all();
+		return ok(category.render(categories));
 	}
 
 }

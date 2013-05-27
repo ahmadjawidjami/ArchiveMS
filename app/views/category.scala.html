@@ -1,4 +1,4 @@
-
+@(categories: List[CategoryStorage])
 
 <head>
 <link rel="stylesheet" type="text/css" media="screen"
@@ -59,14 +59,18 @@
 			<form action="@routes.CategoryCreator.addCategory" method="post">
 				<input class="input-medium" type="text" name="categoryName"
 					required="required" placeholder="Category name to add"><br>
-				<input class=" btn btn-warning" type="submit" value="Addd">
+				<input class=" btn btn-warning" type="submit" value="Add">
 				<br>
 			</form>
 			<br> <br> Delete Category: <br> <br>
 			<form action="@routes.CategoryRemover.removeCategory()" method="post">
-				<input name="categoryName" type="text" required="required"
-					placeholder="Category name to remove"><br> <input
-					class=" btn btn-warning" type="submit" value="Delete">
+				<select name="categoryName" type="text" required="required">
+				@for(p <- categories){
+				<option value = "@p.categoryName">@p.categoryName</option> 
+				}
+				</select>
+				<br>
+					<input class=" btn btn-warning" type="submit" value="Delete">
 			</form>
 		</div>
 	</div>
