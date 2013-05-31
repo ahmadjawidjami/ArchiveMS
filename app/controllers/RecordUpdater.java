@@ -10,7 +10,7 @@ public class RecordUpdater extends Controller {
 	public static DetailsStorage recordForUpdate;
 	
 	public RecordUpdater(DetailsStorage recordForUpdate){
-		this.recordForUpdate = recordForUpdate;
+		RecordUpdater.recordForUpdate = recordForUpdate;
 		
 	}
 	
@@ -26,7 +26,8 @@ public class RecordUpdater extends Controller {
 		detailsFromDatabase = updateForm.get();
 		detailsFromDatabase.update(recordForUpdate.id);
 		
-		return ok(updateDetails.name);
+		//RecordFinder.findRecord();
+		return redirect(controllers.routes.Application.renderRecordPage());
 	}
 	
 	

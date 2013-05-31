@@ -5,7 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.List;
 
+import models.CategoryStorage;
 import models.DetailsStorage;
 
 import play.data.Form;
@@ -31,94 +33,41 @@ public class Archiver extends Controller {
 		if (record != null) {
 			String fileName = record.getFilename();
 			File file = record.getFile();
+			List<CategoryStorage> categories = CategoryStorage.find.all();
 
 			try {
-				if (recordDetails.category.equals("Cartoon and Children")) {
-					recordDetails.path = "uploads/cartoon_and_children/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Chants")) {
-					recordDetails.path = "uploads/chants/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Documentary")) {
-					recordDetails.path = "uploads/documentary/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Live Programs")) {
-					recordDetails.path = "uploads/live_programs/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Productional Programs")) {
-					recordDetails.path = "uploads/productional_programs/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Recitations")) {
-					recordDetails.path = "uploads/recitations/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Series")) {
-					recordDetails.path = "uploads/series/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
-				}
-				
-				if (recordDetails.category.equals("Short Clips and Chants")) {
-					recordDetails.path = "uploads/short_clips_and_chants/";
-					// in order to upload file the : uploads/lessons/ . folder should exist in the project
-					archiveToDisk(file,
-							new File(recordDetails.path + recordDetails.name+"."
-									+ fileName.charAt((int) fileName.length() - 3)
-									+ fileName.charAt((int) fileName.length() - 2)
-									+ fileName.charAt((int) fileName.length() - 1)));
-					archiveToDatabase(recordDetails);
+
+				for (int index = 0; index < categories.size(); index++) {
+
+					if (recordDetails.category
+							.equals(categories.get(index).categoryName)) {
+
+						File tag = new File("uploads/" + recordDetails.category
+								+ "/" + recordDetails.tag);
+						if (!tag.exists()) {
+							tag.mkdir();
+						}
+
+						recordDetails.path = "uploads/"
+								+ categories.get(index).categoryName + "/"
+								+ recordDetails.tag;
+						// in order to upload file the : uploads/lessons/ .
+						// folder should exist in the project
+						archiveToDisk(
+								file,
+								new File(recordDetails.path+"/"
+										+ recordDetails.name
+										+ "."
+										+ fileName.charAt((int) fileName
+												.length() - 3)
+										+ fileName.charAt((int) fileName
+												.length() - 2)
+										+ fileName.charAt((int) fileName
+												.length() - 1)));
+						archiveToDatabase(recordDetails);
+						break;
+					}
+
 				}
 
 			} catch (Exception ex) {
@@ -126,7 +75,7 @@ public class Archiver extends Controller {
 			}
 
 			return ok("file uploaded");
-			
+
 		} else {
 			flash("error", "Missing file");
 			return redirect(routes.Application.index());

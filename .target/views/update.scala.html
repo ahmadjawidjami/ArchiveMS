@@ -1,4 +1,4 @@
-@(record: DetailsStorage)
+@(record: DetailsStorage)(categories: List[CategoryStorage])
 
 <html>
 
@@ -53,18 +53,18 @@ border-width:1px; background-color:white;">
 <h3 align="center" style="margin:20px 0 0 -150px;" >Edit</h3><br><br>
 <form action="@routes.RecordUpdater.updateRecord()" method="post">
 <div class="container">
-Category: <select style="margin:0 0 0 10px;">
-			<option type="text" name="lessons">Name</option>
-			<option type="text" name="category">Category</option>
-			<option type="date" name="publish">Publish</option>
-			<option type="date" name="record">Record</option>
-			<option type="date" name="archive">Archive</option>
-		</select><br><br>
-Name: <input class="input-medium" type="text" name="name" placeholder="@record.name" style="margin:0 0 0 33px;"><br><br>
-Tag: <input class="input-medium" type="text" name="tag" placeholder="@record.tag" style="margin:0 0 0 46px;"><br><br>
-Date: <input class="input-medium" type="date" name="recordDate" style="margin:0 0 0 40px;"><br><br>
-Record: <input class="input-medium" type="date" name="publishDate" style="margin:0 0 0 25px;"><br><br>
-Publish: <input class="input-medium" type="date" name="archiveDate" style="margin:0 0 0 26px;"><br><br>
+Category: <select name="categoryName" required="required">
+				<option  selected="selected" value = "@record.category">@record.category</option> 
+				@for(p <- categories){
+				<option value = "@p.categoryName">@p.categoryName</option> 
+				}
+				</select>
+				<br>
+Name: <input class="input-medium" type="text" name="name" placeholder="@record.name" required="required" style="margin:0 0 0 33px;"><br><br>
+Tag: <input class="input-medium" type="text" name="tag" placeholder="@record.tag" required="required" style="margin:0 0 0 46px;"><br><br>
+Record Date: <input class="input-medium" type="date" name="recordDate" placeholder="@record.recordDate" required="required" style="margin:0 0 0 40px;"><br><br>
+Publish Date: <input class="input-medium" type="date" name="publishDate" placeholder="@record.publishDate" required="required" style="margin:0 0 0 25px;"><br><br>
+Archive Date: <input class="input-medium" type="date" name="archiveDate" placeholder="@record.archiveDate" required="required" style="margin:0 0 0 26px;"><br><br>
 
   <button class=" btn btn-warning" type="submit" style="margin:0 0 0 400px;">Update</button>
 

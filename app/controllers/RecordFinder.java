@@ -9,6 +9,12 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 public class RecordFinder extends Controller {
+	
+	
+	
+	public RecordFinder(){
+		
+	}
 
 	public static Result findRecord() {
 

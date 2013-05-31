@@ -12,7 +12,7 @@ POST	/category/remove			controllers.CategoryRemover.removeCategory()
 GET		/record						controllers.Application.renderRecordPage()
 POST	/search_record				controllers.RecordFinder.findRecord()
 GET		/search_result				controllers.PageMaker.makePage()
-POST	/update						controllers.RecordSelector.selectRecord()
+POST	/update/:id						controllers.RecordSelector.selectRecord(id: Integer)
 POST	/recordUpdated				controllers.RecordUpdater.updateRecord()
 
 # Map static resources from the /public folder to the /assets URL path
