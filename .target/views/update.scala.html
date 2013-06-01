@@ -53,7 +53,7 @@ border-width:1px; background-color:white;">
 <h3 align="center" style="margin:20px 0 0 -150px;" >Edit</h3><br><br>
 <form action="@routes.RecordUpdater.updateRecord()" method="post">
 <div class="container">
-Category: <select name="categoryName" required="required">
+Category: <select name="category" required="required">
 				<option  selected="selected" value = "@record.category">@record.category</option> 
 				@for(p <- categories){
 				<option value = "@p.categoryName">@p.categoryName</option> 

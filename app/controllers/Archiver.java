@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import models.CategoryStorage;
 import models.DetailsStorage;
@@ -32,6 +33,14 @@ public class Archiver extends Controller {
 
 		if (record != null) {
 			String fileName = record.getFilename();
+
+			String extension = ".avi";
+
+			StringTokenizer st = new StringTokenizer(fileName, ".");
+			while (st.hasMoreTokens()) {
+				extension = st.nextToken();
+			}
+
 			File file = record.getFile();
 			List<CategoryStorage> categories = CategoryStorage.find.all();
 
@@ -53,17 +62,8 @@ public class Archiver extends Controller {
 								+ recordDetails.tag;
 						// in order to upload file the : uploads/lessons/ .
 						// folder should exist in the project
-						archiveToDisk(
-								file,
-								new File(recordDetails.path+"/"
-										+ recordDetails.name
-										+ "."
-										+ fileName.charAt((int) fileName
-												.length() - 3)
-										+ fileName.charAt((int) fileName
-												.length() - 2)
-										+ fileName.charAt((int) fileName
-												.length() - 1)));
+						archiveToDisk(file, new File(recordDetails.path + "/"
+								+ recordDetails.name + "." + extension));
 						archiveToDatabase(recordDetails);
 						break;
 					}
