@@ -26,8 +26,6 @@ public class RecordUpdater extends Controller {
 		DetailsStorage detailsFromDatabase = DetailsStorage.find.byId(""
 				+ recordForUpdate.id);
 
-		// detailsFromDatabase = updateForm.get();
-
 		updateRecordInDisk(detailsFromDatabase, updateDetails);
 		updateRecordInDatabase(updateDetails);
 
@@ -42,27 +40,6 @@ public class RecordUpdater extends Controller {
 
 	public static void updateRecordInDisk(DetailsStorage detailsFromDatabase,
 			DetailsStorage updateDetails) {
-
-		// if (!detailsFromDatabase.name.equals(updateDetails.name)) {
-		//
-		// File f = new File(detailsFromDatabase.path);
-		//
-		// if (f.isDirectory()) {
-		//
-		//
-		// for (File c : f.listFiles()) {
-		// StringTokenizer st = new StringTokenizer(c.getName(), ".");
-		//
-		// if (st.nextToken().equals(detailsFromDatabase.name)) {
-		//
-		// c.renameTo(new File(detailsFromDatabase.path + "/"
-		// + updateDetails.name+"."+st.nextToken()));
-		// }
-		//
-		// }
-		// }
-		//
-		// }
 
 		if (!detailsFromDatabase.category.equals(updateDetails.category)) {
 
@@ -88,7 +65,6 @@ public class RecordUpdater extends Controller {
 
 						c.renameTo(new File(updateDetails.path + "/"
 								+ updateDetails.name + "." + st.nextToken()));
-						// c.deleteOnExit();
 
 					}
 
@@ -127,8 +103,7 @@ public class RecordUpdater extends Controller {
 				}
 			}
 
-		}
-		else
+		} else
 
 		if (!detailsFromDatabase.name.equals(updateDetails.name)) {
 
@@ -140,13 +115,6 @@ public class RecordUpdater extends Controller {
 					StringTokenizer st = new StringTokenizer(c.getName(), ".");
 
 					if (st.nextToken().equals(detailsFromDatabase.name)) {
-
-//						File tag = new File("uploads/"
-//								+ detailsFromDatabase.category + "/"
-//								+ updateDetails.tag);
-//						if (!tag.exists()) {
-//							tag.mkdir();
-//						}
 
 						updateDetails.path = detailsFromDatabase.path;
 						updateDetails.update(recordForUpdate.id);
