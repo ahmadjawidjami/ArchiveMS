@@ -20,6 +20,13 @@ create table details_storage (
   constraint pk_details_storage primary key (id))
 ;
 
+create table UserStorage (
+  username                  varchar(255) not null,
+  password                  varchar(255),
+  job                       varchar(255),
+  constraint pk_UserStorage primary key (username))
+;
+
 
 
 
@@ -30,6 +37,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table category_storage;
 
 drop table details_storage;
+
+drop table UserStorage;
 
 SET FOREIGN_KEY_CHECKS=1;
 

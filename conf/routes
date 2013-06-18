@@ -3,6 +3,13 @@
 # ~~~~
 
 # Home page
+
+GET     /login                              controllers.KeyChecker.login()
+POST    /login                              controllers.KeyChecker.authenticate()
+GET     /logout                             controllers.KeyChecker.logout()
+
+
+
 GET     /                           controllers.Application.index()
 GET		/archive					controllers.Application.renderArchivePage()
 POST	/archive/uploaded			controllers.Archiver.archive()

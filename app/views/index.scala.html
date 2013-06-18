@@ -1,4 +1,4 @@
-@(message: String) @main("Welcome to Play 2.1") {
+@(message: String)
 
 <h1>
 	Welcome to ArchiveMS System!!! <br> The System is under
@@ -17,7 +17,14 @@
   
   <li class="divider"></li>
   <li><a tabindex="-1" href="#">Category</a></li>
+  
+  
 </ul>
 </ul>
 
-}
+<form action="@routes.KeyChecker.logout" method="get">
+<button type = "submit">Logout</button>
+
+</form>
+
+
