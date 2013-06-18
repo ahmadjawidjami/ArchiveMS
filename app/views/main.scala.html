@@ -1,24 +1,35 @@
-@(title: String)(content: Html)
-
-<!DOCTYPE html>
+@(user: UserStorage)(body: Html)
 
 <html>
-<head>
-<title>@title</title>
-
-<!-- Bootstrap CSS File added by me -->
-<link rel="stylesheet" type="text/css" media="screen"
-	href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
-
-<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-<link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-<script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
-
-<!-- bootstrap js added by me -->
-        <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.min.js")" ></script>
-</head>
-<body>
-fdd
-@content
-</body>
+    <head>
+        <title>Zentasks</title>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-1.7.1.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/jquery-play-1.7.1.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/underscore-min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/backbone-min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/main.js")"></script>
+        
+    </head>
+    <body>
+        <header>
+            
+            <dl id="user">
+                <dt>@user.job <span>(@user.username)</span></dt>
+                <dd>
+                    <a href="@routes.KeyChecker.logout()">Logout</a>
+                </dd>
+            </dl>
+        </header>
+        <nav>
+            <h4 class="dashboard"><a href="#/">Dashboard</a></h4>
+            
+            <button id="newGroup">New group</button>
+        </nav>
+        <section id="main">
+            @body
+        </section>
+    </body>
 </html>
+
