@@ -18,7 +18,7 @@ public class KeyChecker extends Controller {
 
 	// -- Authentication
 
-	
+
 
 	/**
 	 * Login page.
