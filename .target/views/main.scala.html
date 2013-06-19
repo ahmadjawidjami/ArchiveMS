@@ -1,4 +1,4 @@
-@(user: User)(body: Html)
+@(user: UserStorage)(body: Html)
 
 <html>
     <head>
@@ -16,9 +16,9 @@
         <header>
             
             <dl id="user">
-                <dt>@user.name <span>(@user.email)</span></dt>
+                <dt>@user.job <span>(@user.username)</span></dt>
                 <dd>
-                    <a href="@routes.Application.logout()">Logout</a>
+                    <a href="@routes.KeyChecker.logout()">Logout</a>
                 </dd>
             </dl>
         </header>

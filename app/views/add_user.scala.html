@@ -1,0 +1,42 @@
+
+
+<html>
+<body>
+
+	
+	
+	
+	@if(flash.contains("success")) {
+	<p class="error">@flash.get("success")</p>
+	}
+	
+	 @if(flash.contains("do not match")) {
+	<p class="error">@flash.get("do not match")</p>
+	}
+	
+	@if(flash.contains("exist")) {
+	<p class="error">@flash.get("exist")</p>
+	}
+
+	<form action="@routes.UserCreator.createUser()" method="post">
+
+		username: <input type="text" name="username"> <br> password: <input
+			type="password" name="password"> <br> retype password: <input
+			type="password" name="retypedPassword"> <br> job: <input
+			type="text" name="job">
+		<button type="submit">Create</button>
+
+
+
+
+
+	</form>
+
+
+
+</body>
+
+
+
+
+</html>

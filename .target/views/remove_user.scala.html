@@ -1,0 +1,31 @@
+@(users: List[UserStorage])
+@import helper._
+<html>
+
+<body>
+@if(flash.contains("none")) {
+	<p class="succes">@flash.get("none")</p>
+	}
+	
+	@if(flash.contains("success")) {
+	<p class="success">@flash.get("success")</p>
+	}
+
+
+User job
+
+@for(currentUser <- users){
+@form(routes.UserRemover.removeUser(currentUser.username)){
+@currentUser.username
+@currentUser.job<br>
+
+<button type = "submit">Remove</button>
+</form>
+}
+
+}
+
+</body>
+
+
+</html>

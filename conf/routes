@@ -22,5 +22,14 @@ GET		/search_result				controllers.PageMaker.makePage()
 POST	/update/:id						controllers.RecordSelector.selectRecord(id: Integer)
 POST	/recordUpdated				controllers.RecordUpdater.updateRecord()
 
+#User Management
+
+GET		/user/add					controllers.Application.renderAddUserPage()
+POST	/user/created				controllers.UserCreator.createUser()
+GET		/user/remove				controllers.Application.renderRemoveUserPage()
+POST	/user/removed/:username		controllers.UserRemover.removeUser(username: String)
+
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
