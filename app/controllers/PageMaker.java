@@ -14,7 +14,7 @@ public class PageMaker extends Controller {
 
 	public PageMaker(List<DetailsStorage> records) {
 
-		this.records = records;
+		PageMaker.records = records;
 
 	}
 

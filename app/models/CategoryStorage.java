@@ -9,7 +9,7 @@ import play.db.ebean.Model;
 public class CategoryStorage extends Model {
 
 	@Id
-	public String categoryName;
+	public String categoryName = "";
 
 	public static Finder<String, CategoryStorage> find = new Finder<String, CategoryStorage>(
 			String.class, CategoryStorage.class);

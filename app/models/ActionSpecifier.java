@@ -1,8 +1,7 @@
 package models;
 
-public class UniqueRecord {
+public class ActionSpecifier {
 	
-	public String id;
 	public String submitType;
 
 }
