@@ -24,6 +24,9 @@ public class UserStorage extends Model {
     public String password;
     
     @Constraints.Required
+    public String retypedPassword;
+    
+    @Constraints.Required
     public String job;
     
     
