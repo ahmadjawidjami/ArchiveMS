@@ -2,10 +2,12 @@ package models;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import play.db.ebean.Model;
 
 @Entity
+@Table(name = "Records")
 public class DetailsStorage extends Model {
 	@Id
 	public int id;

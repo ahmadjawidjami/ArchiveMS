@@ -28,7 +28,7 @@ public class RecordUpdater extends Controller {
 
 		updateRecordInDisk(detailsFromDatabase, updateDetails);
 		updateRecordInDatabase(updateDetails);
-
+		flash("success", "the record was successfully updated");
 		return redirect(controllers.routes.Application.renderRecordPage());
 	}
 
@@ -41,93 +41,27 @@ public class RecordUpdater extends Controller {
 	public static void updateRecordInDisk(DetailsStorage detailsFromDatabase,
 			DetailsStorage updateDetails) {
 
-		if (!detailsFromDatabase.category.equals(updateDetails.category)) {
+		File category = new File("public/uploads/" + updateDetails.category);
+		if (!category.exists())
+			category.mkdir();
 
-			File f = new File(detailsFromDatabase.path);
+		File tag = new File("public/uploads/" + updateDetails.category + "/"
+				+ updateDetails.tag);
+		if (!tag.exists())
+			tag.mkdir();
 
-			if (f.isDirectory()) {
+		File record = new File("public/" + detailsFromDatabase.path);
 
-				for (File c : f.listFiles()) {
-					StringTokenizer st = new StringTokenizer(c.getName(), ".");
+		StringTokenizer st = new StringTokenizer(record.getName(), ".");
+		String extension = ".flv";
+		while (st.hasMoreTokens())
+			extension = "." + st.nextToken();
 
-					if (st.nextToken().equals(detailsFromDatabase.name)) {
+		updateDetails.path = "uploads/" + updateDetails.category + "/"
+				+ updateDetails.tag + "/" + updateDetails.name + extension;
+		updateDetails.update(recordForUpdate.id);
 
-						File tag = new File("uploads/" + updateDetails.category
-								+ "/" + updateDetails.tag);
-						if (!tag.exists()) {
-							tag.mkdir();
-						}
-
-						updateDetails.path = detailsFromDatabase.path
-								+ "/../../" + updateDetails.category + "/"
-								+ updateDetails.tag;
-						updateDetails.update(recordForUpdate.id);
-
-						c.renameTo(new File(updateDetails.path + "/"
-								+ updateDetails.name + "." + st.nextToken()));
-
-					}
-
-				}
-			}
-
-		} else
-
-		if (!detailsFromDatabase.tag.equals(updateDetails.tag)) {
-
-			File f = new File(detailsFromDatabase.path);
-
-			if (f.isDirectory()) {
-
-				for (File c : f.listFiles()) {
-					StringTokenizer st = new StringTokenizer(c.getName(), ".");
-
-					if (st.nextToken().equals(detailsFromDatabase.name)) {
-
-						File tag = new File("uploads/"
-								+ detailsFromDatabase.category + "/"
-								+ updateDetails.tag);
-						if (!tag.exists()) {
-							tag.mkdir();
-						}
-
-						updateDetails.path = detailsFromDatabase.path + "/../"
-								+ updateDetails.tag;
-						updateDetails.update(recordForUpdate.id);
-
-						c.renameTo(new File(updateDetails.path + "/"
-								+ updateDetails.name + "." + st.nextToken()));
-
-					}
-
-				}
-			}
-
-		} else
-
-		if (!detailsFromDatabase.name.equals(updateDetails.name)) {
-
-			File f = new File(detailsFromDatabase.path);
-
-			if (f.isDirectory()) {
-
-				for (File c : f.listFiles()) {
-					StringTokenizer st = new StringTokenizer(c.getName(), ".");
-
-					if (st.nextToken().equals(detailsFromDatabase.name)) {
-
-						updateDetails.path = detailsFromDatabase.path;
-						updateDetails.update(recordForUpdate.id);
-
-						c.renameTo(new File(updateDetails.path + "/"
-								+ updateDetails.name + "." + st.nextToken()));
-
-					}
-
-				}
-			}
-
-		}
+		record.renameTo(new File("public/" + updateDetails.path));
 
 	}
 

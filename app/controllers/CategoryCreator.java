@@ -16,31 +16,32 @@ public class CategoryCreator extends Controller {
 		CategoryStorage sameCategoryInDatabase = CategoryStorage.find.where()
 				.eq("categoryName", newCategory.categoryName).findUnique();
 
-		// if (newCategory.categoryName.length() >= 4) {
 		if (sameCategoryInDatabase == null) {
 			addCategoryToDatabase(newCategory);
 			addCategoryToDisk(newCategory);
-			// return ok("Category '" + newCategory.categoryName
-			// + "' successfully added to the sysyem");
+			flash("addsuccess", "Category '"+newCategory.categoryName+"' was successfully added");
+			
 			return redirect(controllers.routes.Application.renderCategoryPage());
 
 		} else {
-			return ok("category already exists");
+			flash("exist", "the category already exist");
+			return redirect(controllers.routes.Application.renderCategoryPage());
 		}
 
-		// } else {
-		// return ok("Your category name is less than 4");
-		// }
-
+		
 	}
 
 	private static void addCategoryToDisk(CategoryStorage newCategory) {
 
-		File theCategory = new File("uploads/" + newCategory.categoryName);
+		File uploads = new File("public/uploads");
+		if (!uploads.exists())
+			uploads.mkdir();
 
-		// if the directory does not exist, create it
+		File theCategory = new File(uploads + "/" + newCategory.categoryName);
+
+		
 		if (!theCategory.exists()) {
-			// System.out.println("creating directory: " + directoryName);
+			
 			theCategory.mkdir();
 
 		}

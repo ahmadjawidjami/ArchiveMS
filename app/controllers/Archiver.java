@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import models.CategoryStorage;
+import models.Container;
 import models.DetailsStorage;
 
 import play.data.Form;
@@ -25,6 +26,16 @@ public class Archiver extends Controller {
 		Form<DetailsStorage> detailsForm = Form.form(DetailsStorage.class)
 				.bindFromRequest();
 		DetailsStorage recordDetails = detailsForm.get();
+		DetailsStorage check = DetailsStorage.find.where()
+				.eq("name", recordDetails.name)
+				.eq("category", recordDetails.category)
+				.eq("tag", recordDetails.tag).findUnique();
+		if (check != null) {
+
+			flash("exist", "A file with this name already exist");
+			return redirect(routes.Application.renderArchivePage());
+
+		}
 
 		// file form
 		MultipartFormData recordForm = request().body().asMultipartFormData();
@@ -51,20 +62,25 @@ public class Archiver extends Controller {
 					if (recordDetails.category
 							.equals(categories.get(index).categoryName)) {
 
-						File tag = new File("uploads/" + recordDetails.category
-								+ "/" + recordDetails.tag);
+						File tag = new File("public/uploads/"
+								+ recordDetails.category + "/"
+								+ recordDetails.tag);
 						if (!tag.exists()) {
 							tag.mkdir();
 						}
 
 						recordDetails.path = "uploads/"
 								+ categories.get(index).categoryName + "/"
-								+ recordDetails.tag;
+								+ recordDetails.tag + "/" + recordDetails.name
+								+ "." + extension;
 						// in order to upload file the : uploads/lessons/ .
 						// folder should exist in the project
-						archiveToDisk(file, new File(recordDetails.path + "/"
-								+ recordDetails.name + "." + extension));
+						archiveToDisk(file, new File("public/"
+								+ recordDetails.path));
 						archiveToDatabase(recordDetails);
+
+						Container.backupList.add(Container.backListIndex++,
+								recordDetails);
 						break;
 					}
 
@@ -73,12 +89,12 @@ public class Archiver extends Controller {
 			} catch (Exception ex) {
 				return ok(ex.getMessage());
 			}
-
-			return ok("file uploaded");
+			flash("success", "The File was successfully archived");
+			return redirect(routes.Application.renderArchivePage());
 
 		} else {
 			flash("error", "Missing file");
-			return redirect(routes.Application.index());
+			return redirect(routes.Application.renderArchivePage());
 		}
 
 	}

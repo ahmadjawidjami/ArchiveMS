@@ -12,7 +12,7 @@ public class UserRemover extends Controller {
 		if(UserStorage.findByEmail(username)!=null){
 			
 			UserStorage.findByEmail(username).delete();
-			flash("success", "the selected user has been removed");
+			flash("success", "user was removed");
 			return redirect(routes.Application.renderRemoveUserPage()); 
 			
 		}

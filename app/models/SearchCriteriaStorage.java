@@ -10,5 +10,6 @@ public class SearchCriteriaStorage {
 	public String recordDate = "";
 	public String publishDate = "";
 	public String archiveDate = "";
+	public String submitType = "";
 
 }

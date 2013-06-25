@@ -29,7 +29,7 @@ public class UserCreator extends Controller {
 		}
 
 		else {
-			flash("do not match", "two passwords do not match");
+			flash("do not match", "passwords do not match");
 			return redirect(routes.Application.renderAddUserPage());
 
 		}

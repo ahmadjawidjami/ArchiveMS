@@ -1,51 +1,49 @@
 @(form: Form[Key])
 
 <html>
-    <head>
-        <title>Zentasks</title>
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <link rel="stylesheet" type="text/css" media="screen" href="@routes.Assets.at("stylesheets/login.css")">
-    </head>
+   <head>
+<meta charset="utf-8">
+<title>Login</title>
+
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+</head>
     <body>
         
-        <header>
-           
-        </header>
-        
-        @helper.form(routes.KeyChecker.authenticate) {
-            
-            <h1>Sign in</h1>
-            
-            @if(form.hasGlobalErrors) { 
-                <p class="error">
-                    @form.globalError.message
-                </p>
+        <h1 style="font-family:'over there'; color:yellow; margin:70px 0px 0px 1000px;">ArchiveMS</h1>
+<div class="container">
+  <section id="content">
+@helper.form(routes.KeyChecker.authenticate) {
+
+<h1>Log In</h1>
+
+@if(form.hasGlobalErrors) { 
+                <h1>@form.globalError.message</h1>
+                    
+                
             }
             
             @if(flash.contains("success")) {
-                <p class="success">
-                    @flash.get("success")
-                </p>
+                
+                   <h1>@flash.get("success")</h1> 
+                
             }
-            
-            <p>
-                <input type="text" name="username" placeholder="username" value="@form("username").value">
-            </p>
-            <p>
-                <input type="password" name="password" placeholder="Password">
-            </p>
-            <p>
-                <button type="submit">Login</button>
-            </p>
-            
-        }
-        
-        <p class="note">
-            Try <em>guillaume@@sample.com</em> with <em>secret</em> as password.
-        </p>
-            
-    </body>
+<div>
+<input type="text" name="username" placeholder="username" />
+</div>
+<div>
+<input type="password" name="password" placeholder="Password" required="required" id="password" />
+</div>
+<div>
+<input type="submit" value="Log in" style="margin: 50px 0px 0px 650px;" />
+
+</div>
+}<!-- form -->
+
+</section><!-- content -->
+</div><!-- container -->
+</body>
 </html>
+
     
 
 

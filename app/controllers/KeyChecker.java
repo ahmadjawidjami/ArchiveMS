@@ -46,7 +46,7 @@ public class KeyChecker extends Controller {
 	@Security.Authenticated(Secured.class)
 	public static Result logout() {
 		session().clear();
-		flash("success", "You've been logged out");
+		flash("success", "You have been logged out");
 		return redirect(routes.KeyChecker.login());
 	}
 

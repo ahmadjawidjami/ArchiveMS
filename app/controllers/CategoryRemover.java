@@ -2,8 +2,10 @@ package controllers;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 
 import models.CategoryStorage;
+import models.DetailsStorage;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -16,9 +18,10 @@ public class CategoryRemover extends Controller {
 		CategoryStorage categoryToDelete = categoryDetailsForm.get();
 		if (!categoryToDelete.categoryName.equals("")) {
 			removeCategoryFromDatabase(categoryToDelete);
-			removeCategoryFromDisk(new File("uploads/"+categoryToDelete.categoryName));
+			removeCategoryFromDisk(new File("public/uploads/"+categoryToDelete.categoryName));
 //			return ok("Category '" + categoryToDelete.categoryName
 //					+ "' is now Deleted");
+			flash("success", "The selected category was deleted");
 			return redirect(controllers.routes.Application.renderCategoryPage());
 		} else
 			return notFound("No category was selected");
@@ -26,6 +29,10 @@ public class CategoryRemover extends Controller {
 
 	public static void removeCategoryFromDatabase(
 			CategoryStorage categoryToDelete) {
+		List <DetailsStorage> records = DetailsStorage.find.where().eq("category", categoryToDelete.categoryName).findList();
+		for(DetailsStorage currentRecord: records){
+			DetailsStorage.find.byId(""+currentRecord.id).delete();
+		}
 		categoryToDelete.delete();
 
 	}

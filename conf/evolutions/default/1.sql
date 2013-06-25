@@ -8,8 +8,8 @@ create table category_storage (
   constraint pk_category_storage primary key (category_name))
 ;
 
-create table details_storage (
-  id                        integer auto_increment not null,
+create table Records (
+  id                        integer not null,
   category                  varchar(255),
   name                      varchar(255),
   tag                       varchar(255),
@@ -17,28 +17,41 @@ create table details_storage (
   record_date               varchar(255),
   archive_date              varchar(255),
   path                      varchar(255),
-  constraint pk_details_storage primary key (id))
+  constraint pk_Records primary key (id))
 ;
 
 create table UserStorage (
   username                  varchar(255) not null,
   password                  varchar(255),
+  retyped_password          varchar(255),
   job                       varchar(255),
   constraint pk_UserStorage primary key (username))
 ;
+
+create sequence category_storage_seq;
+
+create sequence Records_seq;
+
+create sequence UserStorage_seq;
 
 
 
 
 # --- !Downs
 
-SET FOREIGN_KEY_CHECKS=0;
+SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table category_storage;
+drop table if exists category_storage;
 
-drop table details_storage;
+drop table if exists Records;
 
-drop table UserStorage;
+drop table if exists UserStorage;
 
-SET FOREIGN_KEY_CHECKS=1;
+SET REFERENTIAL_INTEGRITY TRUE;
+
+drop sequence if exists category_storage_seq;
+
+drop sequence if exists Records_seq;
+
+drop sequence if exists UserStorage_seq;
 

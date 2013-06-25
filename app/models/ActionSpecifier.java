@@ -2,6 +2,6 @@ package models;
 
 public class ActionSpecifier {
 	
-	public String submitType;
+	public  String submitType;
 
 }
