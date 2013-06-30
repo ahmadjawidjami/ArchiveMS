@@ -11,7 +11,7 @@ public class RecordRemover extends Controller {
 
 	public void removeRecord(DetailsStorage uniqueRecord) {
 		removeRecordFromDatabase(uniqueRecord);
-		removeRecordFromDisk(new File(uniqueRecord.path), uniqueRecord);
+		removeRecordFromDisk(new File("public/"+uniqueRecord.path), uniqueRecord);
 	}
 
 	public static void removeRecordFromDatabase(DetailsStorage uniqueRecord) {
@@ -20,17 +20,7 @@ public class RecordRemover extends Controller {
 	}
 
 	public static void removeRecordFromDisk(File f, DetailsStorage uniqueRecord) {
-
-		if (f.isDirectory()) {
-
-			for (File c : f.listFiles()) {
-
-				StringTokenizer st = new StringTokenizer(c.getName(), ".");
-
-				if (st.nextToken().equals(uniqueRecord.name))
-					removeRecordFromDisk(c, uniqueRecord);
-			}
-		}
+		
 		if (!f.delete())
 			try {
 				throw new FileNotFoundException("Failed to delete file: " + f);
